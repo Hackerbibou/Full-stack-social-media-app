@@ -14,6 +14,10 @@ Description: I want to build a social media app, where multiple users can intera
 </ul>
 <h3>Wireframes:</h3>
 <h4>Login page</h4>
+<img src='./public/images/Diagram.png' alt='Diagram'/>
+
+<h3>Wireframes:</h3>
+<h4>Login page</h4>
 <img src='./public/images/Login.png' alt='Login'/>
 
 <h4>Homepage page</h4>
