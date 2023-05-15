@@ -34,7 +34,7 @@ Description: I want to build a social media app, where multiple users can intera
 <img src='./public/images/Message.png' alt='Message'/>
 
 <h3>Trello board:</h3>
-<h3>Trello:</h3> <a href="https://trello.com/invite/b/UuHp0Lqr/ATTI5aff67f1eea6b810134fd20a0e325b31E1BA7F6C/simple-project-board"> Link to Trello</a>
+<a href="https://trello.com/invite/b/UuHp0Lqr/ATTI5aff67f1eea6b810134fd20a0e325b31E1BA7F6C/simple-project-board"> Link to Trello</a>
 <img src='./public/images/Trello.png' alt='Trello'/>
 
 
