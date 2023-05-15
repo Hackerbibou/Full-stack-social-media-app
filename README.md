@@ -17,7 +17,7 @@ Description: I want to build a social media app, where multiple users can intera
 <img src='./public/images/Login.png' alt='Login'/>
 
 <h4>Homepage page</h4>
-<img src='./public/images/Homepage.png' alt='Homepage'/>
+<img src='./public/images/HomePage.png' alt='Homepage'/>
 
 <h4>Profile page</h4>
 <img src='./public/images/Profile.png' alt='Profile'/>
