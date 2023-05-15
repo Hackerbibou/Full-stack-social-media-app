@@ -3,6 +3,7 @@
 Description: I want to build a social media app, where multiple users can interact with each other, share posts and privately message one another. When the page first loads, it asks for authentification just so you can access and see all the posts from users. Users can like and comment on each other's post and they will all have the ability to publish their own post.</p>
 
 <h2>Design</h2>
+<h3>Trello:</h3> <a href="https://lucid.app/lucidchart/b908b16e-e530-420f-8b43-b1dff566e7f3/edit?viewport_loc=-478%2C-21%2C3119%2C1558%2C6XbYu1LsVqS5&invitationId=inv_0f2410a2-f7dd-41b8-838f-9c2632d445eb"> Link to Trello</a>
 <h3>Pages</h3>
 <ul>
     <li><strong>Home:</strong> Either show login page or display all posts after user login</li>
