@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs')%>
+<div class="profileHeader">
+        <img class="profileimg" src=<%= Users.find(elem=>elem.id==id).avatar%>>
+        <h1><%= Users.find(elem=>elem.id==id).name%></h1>
+    </div>
+    <hr class="ln"/>
+    <div class="buttonDiv"><button class="profilBtn b1">All POSTS</button></div>
+<div class="profileP">
+    
+    <%Posts.forEach(post=>{%>
+                <div class="profilePost"><a href="/posts/<%= post.id%>"><img class="imgProfile" src=<%=post.imageUrl%> alt=''/></a></div>
+        <%})%>
+
+</div>
+
+<%- include('../partials/footer.ejs')%>
