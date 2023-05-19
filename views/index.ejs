@@ -11,12 +11,13 @@
 
 <body class=<%=(!user)?'notlogin':'login'%>>
   <% if(!user){%>
-
+    <div class="homescreen"><h1 class="h1"> Welcome to Codify.io</h1>
     <div class="off">
-
+      
       <a href="/auth/google"><button class="btn btn1">Sign up</button></a> <a href="/auth/google"><button
           class="btn btn2">Log in</button></a>
 
+    </div>
     </div>
     <%}else{%>
       <div class="on">
