@@ -34,11 +34,12 @@ getting started : https://codify.fly.dev/
 Next Steps:
 
 I would like to add some Dom functionalities
-I want to add a direct messaging feature
+
 I would like to add a news apis 
 I want more social feature like sharing, saving and fowarding
-I would also like to add more css styles
-
+Add a direct messaging feature (sockets)
+Add more css styles
+Implement Emojis
 
 
 
