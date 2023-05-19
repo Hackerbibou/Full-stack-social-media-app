@@ -25,7 +25,7 @@ function show(req, res, next) {
         .then((use) => {
           res.render('posts/show', {
             Posts: post,
-            title: 'Post',
+            title:'Codify',
             Users: use,
             user: req.user,
           });
@@ -39,7 +39,7 @@ function newPost(req, res, next) {
     .then((use) =>
       res.render('posts/new', {
         user: req.user,
-        title: 'New post',
+        title:'Codify',
         Users: use,
       }),
     )
@@ -58,7 +58,7 @@ function edit(req, res, next) {
     .then((post) => {
       Users.find({})
       .then(use=>{
-        res.render('posts/edit', { post: post, title:'edit', Users:use });
+        res.render('posts/edit', { post: post, title:'Codify', Users:use });
       })
       .catch(next)
     })

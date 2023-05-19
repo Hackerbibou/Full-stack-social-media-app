@@ -3,18 +3,8 @@ var router = express.Router();
 const passport = require('passport')
 const PostMalone = require('../models/posts')
 const Users = require('../models/user')
-/*
-router.get('/', function(req, res, next) {
-  fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
-		.then((res) => res.json())
-		.then((pokemon) => {
-			res.render('pokedex/index', {
-				pokemon: pokemon.results,
-				title: 'Pokedex',
-			})
-		})
-})
-*/
+
+
 router.get('/', function(req, res, next) {
 
 
@@ -25,7 +15,7 @@ router.get('/', function(req, res, next) {
         res.render('index',{
           Posts:post.reverse(), 
           user:req.user, 
-          title:'Facebook',
+          title:'Codify',
           Users:use,
           editfunct:()=>{console.log('reach it')}
         
