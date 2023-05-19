@@ -13,9 +13,6 @@
     <li><strong>Create post page:</strong>users will be redirect here to create their posts</li>
 </ul>
 
-<h4>ERD diagram</h4>
-<a href="https://lucid.app/lucidchart/b908b16e-e530-420f-8b43-b1dff566e7f3/edit?viewport_loc=-478%2C-21%2C3119%2C1558%2C6XbYu1LsVqS5&invitationId=inv_0f2410a2-f7dd-41b8-838f-9c2632d445eb"> Link to ERD</a>
-<img src='./public/images/Diagram.png' alt='Diagram'/>
 
 <h3>Wireframes:</h3>
 <h4>Login page</h4>
@@ -30,8 +27,18 @@
 <h4>Create Post page</h4>
 <img src='./public/images/CreatePost.png' alt='CreatePost'/>
 
-<h3>Trello board:</h3>
-<a href="https://trello.com/invite/b/UuHp0Lqr/ATTI5aff67f1eea6b810134fd20a0e325b31E1BA7F6C/simple-project-board"> Link to Trello</a>
-<img src='./public/images/Trello.png' alt='Trello'/>
+Technologies used: HTML CSS JavaScript node.js MongoDB Mongoose
+
+getting started : https://codify.fly.dev/
+
+Next Steps:
+
+I would like to add some Dom functionalities
+I want to add a direct messaging feature
+I would like to add a news apis 
+I want more social feature like sharing, saving and fowarding
+I would also like to add more css styles
+
+
 
 
