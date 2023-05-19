@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px  Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
+
 }
 .off{
 display: flex;
@@ -33,7 +38,7 @@ background: linear-gradient(180deg, #24C7A0 0%, #0F1547 78.12%, #01001D 100%);
 .login{
   padding: 50px;
 
-  background: linear-gradient(180deg,#000220 0%, #09002f 33%, #070030 66%, #08002f 100%);
+  background: linear-gradient(180deg,#000220 0%,#000220 50%, #914d49 100%);
  color: white;
 }
 .editu{
@@ -74,7 +79,8 @@ a {
 .userPost{
   display: flex;
   gap: 5px;
-  font-size: 6px;
+  align-items: center;
+  font-size: 7px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 0px;
@@ -101,11 +107,15 @@ a {
   align-items: center;
 }
 .editPopup{
-  position: absolute;
-  
+
   display: flex;
-  right:0;
-  top: 0;
+ 
+}
+.hide{
+  display: none;
+}
+.show{
+  display: inline;
 }
 .thefirst{
   font-size: 10px;
@@ -117,14 +127,14 @@ a {
 }
 .viewComment{
   margin-bottom: 15px;
-  color: rgb(230, 230, 230);
+  color: rgba(230, 230, 230, 0.819);
   font-size: 12px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 hr{
   border: 1px solid white;
-  max-width: 48vw;
+  max-width: 45vw;
   margin-bottom: 40px;
   margin-top: 40px;
   opacity: 0.2;
@@ -149,8 +159,11 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  min-width: 200px;
+  max-width: 264px;
+  min-height: 200px;
+  max-height: 264px;
+
   overflow: hidden;
 }
 .imgProfile{
@@ -159,8 +172,9 @@ nav{
 .profileP{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap:2px;
-  max-width: 754px;
+  max-width: 800px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
@@ -183,7 +197,7 @@ nav{
   margin: 0 auto;
 }
 .ln{
-  max-width: 754px;
+  max-width: 800px;
 }
 .profilBtn{
   display: flex;
@@ -264,8 +278,9 @@ a{
   position: fixed;
   width: 190px;
   padding: 10px;
-  height: 280px;
+  height: 320px;
   box-shadow: 2px 2px 10px #ffffff48;
+  border-radius: 8px;
  
   
 }
@@ -288,11 +303,17 @@ a{
   flex-direction: column;
   gap:5px
 }
+span{
+  width: 90%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.193);
+  margin: 0 auto;
+}
 #pp{
   display: flex;
   max-width: 45vw;
   align-items: center;
-  font-size: 12px;
+  font-size: 15px;
   gap: 7px;
 }
 .comments{
@@ -367,4 +388,14 @@ border: none;
   position: fixed;
   right: 50px;
 
+}
+footer{
+  height: 500px;
+}
+.proff{
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 10px #ffffff65;
+  padding: 70px;
+  border-radius: 10px;
 }
