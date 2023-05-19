@@ -172,7 +172,7 @@ nav{
 .profileP{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap:2px;
   max-width: 800px;
   margin: 0 auto;
