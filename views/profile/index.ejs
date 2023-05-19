@@ -1,4 +1,5 @@
 <%- include('../partials/header.ejs')%>
+<div class="proff">
 <div class="profileHeader">
         <img class="profileimg" src="<%= Users.find(elem=>elem.id==user.id).avatar%>">
         <h1><%= Users.find(elem=>elem.id==user.id).name%></h1>
@@ -15,7 +16,7 @@
         
         
         
-
+</div>
 
 </div>
 

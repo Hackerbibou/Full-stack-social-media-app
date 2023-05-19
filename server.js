@@ -2,6 +2,7 @@
 require('dotenv').config();
 require('./config/database');
 require('./config/passport');
+require('./config/auth');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -17,6 +18,7 @@ const postsRouter = require('./routes/posts');
 const commentsRouter = require('./routes/comments');
 const likesRouter = require('./routes/likes');
 const profileRouter = require('./routes/profile');
+const isLoggedIn = require('./config/auth');
 
 
 
@@ -52,6 +54,7 @@ app.use(function (req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/', isLoggedIn )
 app.use('/posts', postsRouter);
 app.use('/comments', commentsRouter);
 app.use('/likes', likesRouter);

@@ -42,6 +42,7 @@
                         stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line>
                     </svg>CREATE</p>
                 </a>
+                <span></span>
                 <a href="/">
                   <p class="menuItem"><svg aria-label="Home" class="_ab6-" color="white" fill="rgb(245, 245, 245)"
                       height="24" role="img" viewBox="0 0 24 24" width="24">
@@ -50,7 +51,7 @@
                         fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>HOME</p>
                 </a>
-
+                <span></span>
                 <a href="">
                   <p class="menuItem"><svg aria-label="Settings" class="x1lliihq x1n2onr6" color="white"
                       fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24" width="24">
@@ -62,10 +63,11 @@
                         fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
                     </svg>APPEARANCE</p>
                 </a>
-
+                <span></span>
                 <a href="/profile">
                   <p class="menuItem"><img class="menuAvatar" src="<%=user.avatar%>" alt="avatar" />PROFILE</p>
                 </a>
+                <span></span>
               </div>
             </div>
           </div>
@@ -89,34 +91,24 @@
                   </div>
                 </a>
 
-                <button class='likebtn'>
-                  <svg class="elipse" aria-label="More options" class="_ab6-" color="white" fill="white" height="24"
-                    role="img" viewBox="0 0 24 24" width="24">
-                    <circle cx="12" cy="12" r="1.5"></circle>
-                    <circle cx="6" cy="12" r="1.5"></circle>
-                    <circle cx="18" cy="12" r="1.5"></circle>
-                  </svg>
+              
+                  <%if(post.user==user.id){%>
+                    <div class="editPopup">
+                      <a href="/posts/<%=post.id%>/edit"><button class=" bttn edit">EDIT</button></a>
+                      <form action="/posts/<%=post._id%>?_method=DELETE" method="POST"><button type="submit"
+                          class="bttn delete">DELETE</button></form>
+                    </div>
+                    <%}else{%>
+                      <div class="editPopup">
+                       <a href="https://abiboulayediagne.wordpress.com/film/"> <button class="bttn report">REPORT THIS USER</button></a>
+                      </div>
+                      <%}%>
 
                 </button>
               </div>
               <div class="imgDiv">
 
 
-
-
-
-                <%if(post.user==user.id){%>
-
-                  <div class="editPopup">
-                    <a href="/posts/<%=post.id%>/edit"><button class=" bttn edit">EDIT</button></a>
-                    <form action="/posts/<%=post._id%>?_method=DELETE" method="POST"><button type="submit"
-                        class="bttn delete">DELETE</button></form>
-                  </div>
-                  <%}else{%>
-                    <div class="editPopup">
-                      <button class="bttn report">REPORT THIS USER</button>
-                    </div>
-                    <%}%>
 
 
 

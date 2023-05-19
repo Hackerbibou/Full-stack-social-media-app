@@ -12,27 +12,32 @@
             <img class="avatar" src="<%= Users.find(elem=>elem.id==Posts.user).avatar%>"></img>
             <h1 class="namePost"><%=Users.find(elem=>elem.id==Posts.user).name%></h1>
             </div></a>
-            <svg class="elipse" aria-label="More options" color="white" fill="white" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg> </div>
+            
+            
+
+                <%if(Posts.user==user.id){%>
+    
+                    <div class="editPopup">
+                      <a href="/posts/<%=Posts.id%>/edit"><button class=" bttn edit">EDIT</button></a>
+                      <form action="/posts/<%=Posts._id%>?_method=DELETE" method="POST"><button type="submit"
+                          class="bttn delete">DELETE</button></form>
+                    </div>
+                    <%}else{%>
+                      <div >
+                        <a href="https://abiboulayediagne.wordpress.com/film/"> <button class="bttn report">REPORT THIS USER</button></a>
+                      </div>
+                      <%}%>
+              
+
+
+
+        </div>
                     <div class="imgDiv">
 
 
 
 
 
-                
-
-                            <%if(Posts.user==user.id){%>
-
-                                <div class="editPopup">
-                                  <a href="/posts/<%=Posts.id%>/edit"><button class=" bttn edit">EDIT</button></a>
-                                  <form action="/posts/<%=Posts._id%>?_method=DELETE" method="POST"><button type="submit"
-                                      class="bttn delete">DELETE</button></form>
-                                </div>
-                                <%}else{%>
-                                  <div class="editPopup">
-                                    <button class="bttn report">REPORT THIS USER</button>
-                                  </div>
-                                  <%}%>
 
 
 
