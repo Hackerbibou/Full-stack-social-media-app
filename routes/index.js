@@ -3,7 +3,7 @@ var router = express.Router();
 const passport = require('passport')
 const PostMalone = require('../models/posts')
 const Users = require('../models/user')
-
+const exclusive = ["6467eea4b1d1fdf3493128f8" , "6467820d2223481af8dc8933", "64629b664b778bd36b0aaea7" , "6468208f2607f3d8ed0d3746"]
 
 router.get('/', function(req, res, next) {
 
@@ -18,6 +18,7 @@ router.get('/', function(req, res, next) {
           title:'Codify',
           Users:use,
           editfunct:()=>{console.log('reach it')}
+          , exclusive: exclusive
         
         })
       })

@@ -10,11 +10,13 @@ module.exports = {
   update,
   remove,
 };
+const exclusive = ["6467eea4b1d1fdf3493128f8" , "6467820d2223481af8dc8933", "64629b664b778bd36b0aaea7" , "6468208f2607f3d8ed0d3746"]
 
 function index(req, res, next) {
+  
   Posts.find({})
     .then((post) => {
-      res.render('index', { Posts: post, user: req.user });
+      res.render('index', { Posts: post, user: req.user, exclusive: exclusive });
     })
     .catch(next);
 }
@@ -28,6 +30,7 @@ function show(req, res, next) {
             title:'Codify',
             Users: use,
             user: req.user,
+            exclusive: exclusive
           });
         })
         .catch(next);
@@ -41,6 +44,7 @@ function newPost(req, res, next) {
         user: req.user,
         title:'Codify',
         Users: use,
+        exclusive: exclusive
       }),
     )
     .catch(next);
@@ -58,7 +62,7 @@ function edit(req, res, next) {
     .then((post) => {
       Users.find({})
       .then(use=>{
-        res.render('posts/edit', { post: post, title:'Codify', Users:use });
+        res.render('posts/edit', { post: post, title:'Codify', Users:use , exclusive: exclusive});
       })
       .catch(next)
     })
