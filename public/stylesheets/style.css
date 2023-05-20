@@ -13,6 +13,7 @@ align-items: center;
 gap: 20px;
 
 }
+
 .homescreen{
   text-align: center;
   font-size: 38px;
@@ -157,6 +158,11 @@ hr{
   margin-top: 40px;
   opacity: 0.2;
 
+}
+.namePost{
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .userAvatar{
   width: 45px;
