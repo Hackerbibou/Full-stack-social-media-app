@@ -10,10 +10,12 @@ const userSchema = new Schema(
 		},
 		email: String,
 		avatar: String,
+		appearance:{type:String, default:"login"}
 	},
 	{
 		timestamps: true,
 	}
+	
 )
 
 module.exports = mongoose.model('SocialUser', userSchema)

@@ -3,14 +3,17 @@
   <head>
     <title><%= title %></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script defer src="/javascripts/app.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body class=<%=(!user)?'notlogin':'login'%>>
+  <body class=<%=(!user)?'notlogin': user.appearance %>
     <div class="navi">
       <div class="menuList">
         <div class="fixedDropdown">
           <div>
-            <button class="logo"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png' alt="" class="dropdown" /></button>
+            <button class="logo"><img
+                src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png'
+                alt="" class="dropdown" /></button>
           </div>
           <div class="ml">
             <a href="/posts/new">
@@ -36,8 +39,8 @@
                 </svg>HOME</p>
             </a>
             <span></span>
-            <a href="">
-              <p class="menuItem"><svg aria-label="Settings" class="x1lliihq x1n2onr6" color="white"
+            <form action="/profile/appearance?_method=PUT" method="POST">
+              <button type="submit" class="ap"><p  class="menuItem APPEARANCE"><svg aria-label="Settings" class="x1lliihq x1n2onr6" color="white"
                   fill="rgb(245, 245, 245)" height="24" role="img" viewBox="0 0 24 24" width="24">
                   <title>Settings</title>
                   <circle cx="12" cy="12" fill="none" r="8.635" stroke="currentColor" stroke-linecap="round"
@@ -45,15 +48,17 @@
                   <path
                     d="M14.232 3.656a1.269 1.269 0 0 1-.796-.66L12.93 2h-1.86l-.505.996a1.269 1.269 0 0 1-.796.66m-.001 16.688a1.269 1.269 0 0 1 .796.66l.505.996h1.862l.505-.996a1.269 1.269 0 0 1 .796-.66M3.656 9.768a1.269 1.269 0 0 1-.66.796L2 11.07v1.862l.996.505a1.269 1.269 0 0 1 .66.796m16.688-.001a1.269 1.269 0 0 1 .66-.796L22 12.93v-1.86l-.996-.505a1.269 1.269 0 0 1-.66-.796M7.678 4.522a1.269 1.269 0 0 1-1.03.096l-1.06-.348L4.27 5.587l.348 1.062a1.269 1.269 0 0 1-.096 1.03m11.8 11.799a1.269 1.269 0 0 1 1.03-.096l1.06.348 1.318-1.317-.348-1.062a1.269 1.269 0 0 1 .096-1.03m-14.956.001a1.269 1.269 0 0 1 .096 1.03l-.348 1.06 1.317 1.318 1.062-.348a1.269 1.269 0 0 1 1.03.096m11.799-11.8a1.269 1.269 0 0 1-.096-1.03l.348-1.06-1.317-1.318-1.062.348a1.269 1.269 0 0 1-1.03-.096"
                     fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>APPEARANCE</p>
-            </a>
+                </svg>APPEARANCE</p></button>
+              </form>
             <span></span>
             <a href="/profile">
               <p class="menuItem"><img class="menuAvatar" src="<%=user.avatar%>" alt="avatar" />PROFILE</p>
             </a>
             <span></span>
+            <div class="spacer"></div>
           </div>
         </div>
+      </div>
       </div>
 
         <nav>

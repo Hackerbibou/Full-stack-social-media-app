@@ -7,7 +7,6 @@ const exclusive = ["6467eea4b1d1fdf3493128f8" , "6467820d2223481af8dc8933", "646
 
 router.get('/', function(req, res, next) {
 
-
   PostMalone.find({})
     .then(post=>{
       Users.find({})

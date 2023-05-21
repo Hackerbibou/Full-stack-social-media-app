@@ -18,22 +18,11 @@
             </h1>
             </div></a>
             
-            
-
-                <%if(Posts.user==user.id){%>
-    
-                    <div class="editPopup">
-                      <a href="/posts/<%=Posts.id%>/edit"><button class=" bttn edit">EDIT</button></a>
-                      <form action="/posts/<%=Posts._id%>?_method=DELETE" method="POST"><button type="submit"
-                          class="bttn delete">DELETE</button></form>
-                    </div>
-                    <%}else{%>
-                      <div >
-                        <a href="https://abiboulayediagne.wordpress.com/film/"> <button class="bttn report">REPORT THIS USER</button></a>
-                      </div>
-                      <%}%>
+        
               
-
+<button class="logo2">
+    <svg aria-label="More options" class="_ab6-" color="white" fill="white" height="40" role="img" viewBox="0 0 24 24" width="40"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+</button>
 
 
         </div>
@@ -41,8 +30,17 @@
 
 
 
-
-
+                        <%if(Posts.user==user.id){%>
+                            <div class="editPopup">
+                              <a href="/posts/<%=Posts.id%>/edit"><button class=" bttn edit">EDIT</button></a>
+                              <form action="/posts/<%=Posts._id%>?_method=DELETE" method="POST"><button type="submit"
+                                  class="bttn delete">DELETE</button></form>
+                            </div>
+                            <%}else{%>
+                              <div class="editPopup">
+                               <a href="https://abiboulayediagne.wordpress.com/film/"> <button class="bttn report">REPORT THIS USER</button></a>
+                              </div>
+                              <%}%>
 
 
 
@@ -62,7 +60,25 @@
                             </button> </form>
                         <a href=""><svg aria-label="Comment" class="x1lliihq x1n2onr6" color="white" fill="rgb(0, 0, 0)" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Comment</title><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg></a>
                       </div>
-                      <p><%= Posts.likes.length%>  Likes</p>
+                      <div class="likeDiv">
+                        <%if(Posts.likes.length>1){%>
+                            <strong>
+                              <p>
+                                <%= Posts.likes.length%> Likes
+                              </p>
+                            </strong>
+                            <%} else if(Posts.likes.length==1){%>
+          
+          
+                              <strong>
+                                <p>
+                                  <%= Posts.likes.length%> Like
+                                </p>
+                              </strong>
+                              <%}else{}%>
+                        <p><%= Posts.createdAt.toLocaleDateString()%></p>
+                      </div>
+                      
                     </div>
                     <p><a href="/profile/others/<%=Posts.user%>"><strong><%=Users.find(elem=>elem.id==Posts.user).name%></strong></a> 
                         <% if(exclusive.includes(Posts.user+"")){ %>
