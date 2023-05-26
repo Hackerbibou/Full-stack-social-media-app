@@ -164,6 +164,9 @@ a {
 
 
 }
+.editPopup1 {
+  display: flex;
+}
 
 .hide {
   display: none;

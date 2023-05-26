@@ -97,24 +97,22 @@
                   </div>
                 </a>
 
-                <button class="logo2">
-                  <svg aria-label="More options" class="_ab6-" color="white" fill="white" height="40" role="img" viewBox="0 0 24 24" width="40"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
-              </button>
-                  
-              </div>
-              <div class="imgDiv">
-
                 <%if(post.user==user.id){%>
-                  <div class="editPopup">
+                  <div class="editPopup1">
                     <a href="/posts/<%=post.id%>/edit"><button class=" bttn edit">EDIT</button></a>
                     <form action="/posts/<%=post._id%>?_method=DELETE" method="POST"><button type="submit"
                         class="bttn delete">DELETE</button></form>
                   </div>
                   <%}else{%>
-                    <div class="editPopup">
+                    <div class="editPopup1">
                      <a href="https://abiboulayediagne.wordpress.com/film/"> <button class="bttn report">REPORT THIS USER</button></a>
                     </div>
                     <%}%>
+                  
+              </div>
+              <div class="imgDiv">
+
+            
 
 
 
@@ -170,6 +168,7 @@
                         </p>
                       </strong>
                       <%}else{}%>
+                   
                   <p><%= post.createdAt.toLocaleDateString()%>  </p>
                 </div>
                 
